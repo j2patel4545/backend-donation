@@ -19,6 +19,10 @@ app.use(bodyParser.json());
 // Routes
 app.use('/api/users', UserRouter);
 
+app.get("/",(req,res)=>{
+    res.send("Server rubbibg");
+})
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
