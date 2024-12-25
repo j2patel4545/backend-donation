@@ -11,7 +11,7 @@ router.post('/register', registerUser);
 router.post('/login', loginUser);
 
 // Route to get user profile (requires authentication)
-router.get('/profile', authenticateUser, getUserProfile);
+router.get('/profile',  getUserProfile);
 
 // Route to update user profile (requires authentication)
 router.put('/profile', authenticateUser, updateUserProfile);
