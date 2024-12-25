@@ -66,11 +66,10 @@ export const loginUser = async (req, res) => {
 
 // Fetch User Profile Controller
 export const getUserProfile = async (req, res) => {
-    const { userId } = req;
 
     try {
         // Find the user by ID
-        const user = await User.findById(userId).select('-password'); // Exclude password from the response
+        const user = await User.find(); // Exclude password from the response
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
